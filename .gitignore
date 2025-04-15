@@ -1,0 +1,12 @@
+__pycache__/
+
+*.pyc
+*.$py.class
+
+.ipyb_checkpoints
+
+.vscode/
+
+*.log
+
+.cache/

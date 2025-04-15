@@ -1,0 +1,753 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_754b1f902f7c5bada4cab412932a29e1 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_754b1f902f7c5bada4cab412932a29e1" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_754b1f902f7c5bada4cab412932a29e1 = L.map(
+                "map_754b1f902f7c5bada4cab412932a29e1",
+                {
+                    center: [23.132894894827583, 77.22804147224137],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 5,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_9a4ac29d6b06a693b4bf6732cf343401 = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 19,
+  "maxNativeZoom": 19,
+  "noWrap": false,
+  "attribution": "OpenStreet Maps",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_9a4ac29d6b06a693b4bf6732cf343401.addTo(map_754b1f902f7c5bada4cab412932a29e1);
+        
+    
+            var circle_marker_2602362f6a9092def5411b6e3a018a8f = L.circleMarker(
+                [27.1752554, 78.0098161],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_754b1f902f7c5bada4cab412932a29e1);
+        
+    
+        var popup_eee82ed8cc6d3b8a8835f107874da396 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_dbc6d5884f8586b3f886c0cbb06b4947 = $(`<div id="html_dbc6d5884f8586b3f886c0cbb06b4947" style="width: 100.0%; height: 100.0%;">Agra: 4.233 per 100,000 people</div>`)[0];
+                popup_eee82ed8cc6d3b8a8835f107874da396.setContent(html_dbc6d5884f8586b3f886c0cbb06b4947);
+            
+        
+
+        circle_marker_2602362f6a9092def5411b6e3a018a8f.bindPopup(popup_eee82ed8cc6d3b8a8835f107874da396)
+        ;
+
+        
+    
+    
+            var circle_marker_302e79c745f0fc7ace6bded05b9d65c7 = L.circleMarker(
+                [23.0215374, 72.5800568],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_754b1f902f7c5bada4cab412932a29e1);
+        
+    
+        var popup_2dafb797eb0d01a5c7a97e67a9960c86 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_5cac740d346fe09f0d7b9cadc4c62b51 = $(`<div id="html_5cac740d346fe09f0d7b9cadc4c62b51" style="width: 100.0%; height: 100.0%;">Ahmedabad: 38.956 per 100,000 people</div>`)[0];
+                popup_2dafb797eb0d01a5c7a97e67a9960c86.setContent(html_5cac740d346fe09f0d7b9cadc4c62b51);
+            
+        
+
+        circle_marker_302e79c745f0fc7ace6bded05b9d65c7.bindPopup(popup_2dafb797eb0d01a5c7a97e67a9960c86)
+        ;
+
+        
+    
+    
+            var circle_marker_6d4c86f594a5b36705b9695212ad3433 = L.circleMarker(
+                [12.98815675, 77.62260003796],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_754b1f902f7c5bada4cab412932a29e1);
+        
+    
+        var popup_3748938388eb9f4811cce14c0a000bed = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_0919d0c56beb021c443745a6c9900999 = $(`<div id="html_0919d0c56beb021c443745a6c9900999" style="width: 100.0%; height: 100.0%;">Bangalore: 30.459 per 100,000 people</div>`)[0];
+                popup_3748938388eb9f4811cce14c0a000bed.setContent(html_0919d0c56beb021c443745a6c9900999);
+            
+        
+
+        circle_marker_6d4c86f594a5b36705b9695212ad3433.bindPopup(popup_3748938388eb9f4811cce14c0a000bed)
+        ;
+
+        
+    
+    
+            var circle_marker_5d7823d92ff93e73936b0165c80f7568 = L.circleMarker(
+                [23.2584857, 77.401989],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_754b1f902f7c5bada4cab412932a29e1);
+        
+    
+        var popup_39a32b2e081b0a4f4dd6810524c75bed = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_90eeb4fac6bd1e223a34aac6db9d0a75 = $(`<div id="html_90eeb4fac6bd1e223a34aac6db9d0a75" style="width: 100.0%; height: 100.0%;">Bhopal: 8.065 per 100,000 people</div>`)[0];
+                popup_39a32b2e081b0a4f4dd6810524c75bed.setContent(html_90eeb4fac6bd1e223a34aac6db9d0a75);
+            
+        
+
+        circle_marker_5d7823d92ff93e73936b0165c80f7568.bindPopup(popup_39a32b2e081b0a4f4dd6810524c75bed)
+        ;
+
+        
+    
+    
+            var circle_marker_f40eee296b39ca0a87b86f4ef201c7fa = L.circleMarker(
+                [13.0836939, 80.270186],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_754b1f902f7c5bada4cab412932a29e1);
+        
+    
+        var popup_2e53e462bb55382563e9b77c102ec1d4 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_ad569de91df47616f9453bddf1abca77 = $(`<div id="html_ad569de91df47616f9453bddf1abca77" style="width: 100.0%; height: 100.0%;">Chennai: 40.274 per 100,000 people</div>`)[0];
+                popup_2e53e462bb55382563e9b77c102ec1d4.setContent(html_ad569de91df47616f9453bddf1abca77);
+            
+        
+
+        circle_marker_f40eee296b39ca0a87b86f4ef201c7fa.bindPopup(popup_2e53e462bb55382563e9b77c102ec1d4)
+        ;
+
+        
+    
+    
+            var circle_marker_84df0abeb13bb80233d187ac9fb3b4bb = L.circleMarker(
+                [28.6273928, 77.1716954],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_754b1f902f7c5bada4cab412932a29e1);
+        
+    
+        var popup_c71395df85d893c14d36c047b644895a = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_629ec34a01d34d64aaa3a9dde83b517c = $(`<div id="html_629ec34a01d34d64aaa3a9dde83b517c" style="width: 100.0%; height: 100.0%;">Delhi: 61.815 per 100,000 people</div>`)[0];
+                popup_c71395df85d893c14d36c047b644895a.setContent(html_629ec34a01d34d64aaa3a9dde83b517c);
+            
+        
+
+        circle_marker_84df0abeb13bb80233d187ac9fb3b4bb.bindPopup(popup_c71395df85d893c14d36c047b644895a)
+        ;
+
+        
+    
+    
+            var circle_marker_d8a73102f8c3d214aac42142c7147066 = L.circleMarker(
+                [28.4031478, 77.3105561],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_754b1f902f7c5bada4cab412932a29e1);
+        
+    
+        var popup_2951fc44aa3c2247c54e018c5df0beed = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_72153733babd34c03963a0d08dd3319e = $(`<div id="html_72153733babd34c03963a0d08dd3319e" style="width: 100.0%; height: 100.0%;">Faridabad: 2.123 per 100,000 people</div>`)[0];
+                popup_2951fc44aa3c2247c54e018c5df0beed.setContent(html_72153733babd34c03963a0d08dd3319e);
+            
+        
+
+        circle_marker_d8a73102f8c3d214aac42142c7147066.bindPopup(popup_2951fc44aa3c2247c54e018c5df0beed)
+        ;
+
+        
+    
+    
+            var circle_marker_db0774fbfbfac14d3eeaff04e4fe0f7a = L.circleMarker(
+                [28.7749966, 77.4586967071196],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_754b1f902f7c5bada4cab412932a29e1);
+        
+    
+        var popup_6bef7adedc418c7b6b56bbfce474b1ff = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_9bfba989d1cb3efb8a6d14f6e88da2da = $(`<div id="html_9bfba989d1cb3efb8a6d14f6e88da2da" style="width: 100.0%; height: 100.0%;">Ghaziabad: 3.57 per 100,000 people</div>`)[0];
+                popup_6bef7adedc418c7b6b56bbfce474b1ff.setContent(html_9bfba989d1cb3efb8a6d14f6e88da2da);
+            
+        
+
+        circle_marker_db0774fbfbfac14d3eeaff04e4fe0f7a.bindPopup(popup_6bef7adedc418c7b6b56bbfce474b1ff)
+        ;
+
+        
+    
+    
+            var circle_marker_35c567917570038ae7e52c8673cfdfd0 = L.circleMarker(
+                [17.360589, 78.4740613],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_754b1f902f7c5bada4cab412932a29e1);
+        
+    
+        var popup_a7430ffd571bbe4e9213ab326b1bae7f = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_d24ec50b6c8e6e78676e6611b4089f9b = $(`<div id="html_d24ec50b6c8e6e78676e6611b4089f9b" style="width: 100.0%; height: 100.0%;">Hyderabad: 60.764 per 100,000 people</div>`)[0];
+                popup_a7430ffd571bbe4e9213ab326b1bae7f.setContent(html_d24ec50b6c8e6e78676e6611b4089f9b);
+            
+        
+
+        circle_marker_35c567917570038ae7e52c8673cfdfd0.bindPopup(popup_a7430ffd571bbe4e9213ab326b1bae7f)
+        ;
+
+        
+    
+    
+            var circle_marker_c1147acdb6fde020eea9f0ab9eb4428d = L.circleMarker(
+                [22.7203616, 75.8681996],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_754b1f902f7c5bada4cab412932a29e1);
+        
+    
+        var popup_89cbec7ef1bc2347c4efc5e11038fe1f = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_8c15f7d8ee858b2c1119029a5d8fe78f = $(`<div id="html_8c15f7d8ee858b2c1119029a5d8fe78f" style="width: 100.0%; height: 100.0%;">Indore: 5.339 per 100,000 people</div>`)[0];
+                popup_89cbec7ef1bc2347c4efc5e11038fe1f.setContent(html_8c15f7d8ee858b2c1119029a5d8fe78f);
+            
+        
+
+        circle_marker_c1147acdb6fde020eea9f0ab9eb4428d.bindPopup(popup_89cbec7ef1bc2347c4efc5e11038fe1f)
+        ;
+
+        
+    
+    
+            var circle_marker_c2f6391fb7461cc4a3c0280e8271b197 = L.circleMarker(
+                [26.9154576, 75.8189817],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_754b1f902f7c5bada4cab412932a29e1);
+        
+    
+        var popup_d561e534aba24aa2215a3ffa94122a6f = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_49ce21131c1c98c04c27aab9316d47ed = $(`<div id="html_49ce21131c1c98c04c27aab9316d47ed" style="width: 100.0%; height: 100.0%;">Jaipur: 26.311 per 100,000 people</div>`)[0];
+                popup_d561e534aba24aa2215a3ffa94122a6f.setContent(html_49ce21131c1c98c04c27aab9316d47ed);
+            
+        
+
+        circle_marker_c2f6391fb7461cc4a3c0280e8271b197.bindPopup(popup_d561e534aba24aa2215a3ffa94122a6f)
+        ;
+
+        
+    
+    
+            var circle_marker_ec5198b25c634223e3c4a607c1eeeb4e = L.circleMarker(
+                [19.2396742, 73.1366482],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_754b1f902f7c5bada4cab412932a29e1);
+        
+    
+        var popup_1aa1e5ab8b29cc6f8599598f6c9a6060 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_645ab1ce948a7c7c98542b5c453bfbe5 = $(`<div id="html_645ab1ce948a7c7c98542b5c453bfbe5" style="width: 100.0%; height: 100.0%;">Kalyan: 16.471 per 100,000 people</div>`)[0];
+                popup_1aa1e5ab8b29cc6f8599598f6c9a6060.setContent(html_645ab1ce948a7c7c98542b5c453bfbe5);
+            
+        
+
+        circle_marker_ec5198b25c634223e3c4a607c1eeeb4e.bindPopup(popup_1aa1e5ab8b29cc6f8599598f6c9a6060)
+        ;
+
+        
+    
+    
+            var circle_marker_e4f4e4e50887f821d81344b39a7b8214 = L.circleMarker(
+                [26.4609135, 80.3217588],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_754b1f902f7c5bada4cab412932a29e1);
+        
+    
+        var popup_353c4d427592cf721bd9caece00132b9 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_1ee5a4f156bf8a83825eb07cc471f8a7 = $(`<div id="html_1ee5a4f156bf8a83825eb07cc471f8a7" style="width: 100.0%; height: 100.0%;">Kanpur: 6.946 per 100,000 people</div>`)[0];
+                popup_353c4d427592cf721bd9caece00132b9.setContent(html_1ee5a4f156bf8a83825eb07cc471f8a7);
+            
+        
+
+        circle_marker_e4f4e4e50887f821d81344b39a7b8214.bindPopup(popup_353c4d427592cf721bd9caece00132b9)
+        ;
+
+        
+    
+    
+            var circle_marker_a778723462e0bcdefecc7b19333ba103 = L.circleMarker(
+                [22.5726459, 88.3638953],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_754b1f902f7c5bada4cab412932a29e1);
+        
+    
+        var popup_e04b3af8a42ce28bd93c493aec2b59c9 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_73af319e23e396a104e06bd49311ec19 = $(`<div id="html_73af319e23e396a104e06bd49311ec19" style="width: 100.0%; height: 100.0%;">Kolkata: 37.761 per 100,000 people</div>`)[0];
+                popup_e04b3af8a42ce28bd93c493aec2b59c9.setContent(html_73af319e23e396a104e06bd49311ec19);
+            
+        
+
+        circle_marker_a778723462e0bcdefecc7b19333ba103.bindPopup(popup_e04b3af8a42ce28bd93c493aec2b59c9)
+        ;
+
+        
+    
+    
+            var circle_marker_a689f69aeb63966dc8ae4f545dd253cd = L.circleMarker(
+                [26.8381, 80.9346001],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_754b1f902f7c5bada4cab412932a29e1);
+        
+    
+        var popup_d5892370ab25e7eb0229ca97ff9e2059 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_1b0a2ca720e63b71b5c82a847a2d0f67 = $(`<div id="html_1b0a2ca720e63b71b5c82a847a2d0f67" style="width: 100.0%; height: 100.0%;">Lucknow: 41.498 per 100,000 people</div>`)[0];
+                popup_d5892370ab25e7eb0229ca97ff9e2059.setContent(html_1b0a2ca720e63b71b5c82a847a2d0f67);
+            
+        
+
+        circle_marker_a689f69aeb63966dc8ae4f545dd253cd.bindPopup(popup_d5892370ab25e7eb0229ca97ff9e2059)
+        ;
+
+        
+    
+    
+            var circle_marker_45732d1511838237da0dbb7afb5346bd = L.circleMarker(
+                [30.9090157, 75.851601],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_754b1f902f7c5bada4cab412932a29e1);
+        
+    
+        var popup_7e8663e3626036a0ff2effdbd30499a8 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_67aa98396dd410131ca4444517c51734 = $(`<div id="html_67aa98396dd410131ca4444517c51734" style="width: 100.0%; height: 100.0%;">Ludhiana: 5.2 per 100,000 people</div>`)[0];
+                popup_7e8663e3626036a0ff2effdbd30499a8.setContent(html_67aa98396dd410131ca4444517c51734);
+            
+        
+
+        circle_marker_45732d1511838237da0dbb7afb5346bd.bindPopup(popup_7e8663e3626036a0ff2effdbd30499a8)
+        ;
+
+        
+    
+    
+            var circle_marker_2d0d7283b6fc986239977c2a367acd6e = L.circleMarker(
+                [29.0018557, 77.76796714992041],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_754b1f902f7c5bada4cab412932a29e1);
+        
+    
+        var popup_a925346ef6c867d24544c06d4d9ba98e = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_8be1b9c436d1581f4e1ca6102872fcf8 = $(`<div id="html_8be1b9c436d1581f4e1ca6102872fcf8" style="width: 100.0%; height: 100.0%;">Meerut: 4.642 per 100,000 people</div>`)[0];
+                popup_a925346ef6c867d24544c06d4d9ba98e.setContent(html_8be1b9c436d1581f4e1ca6102872fcf8);
+            
+        
+
+        circle_marker_2d0d7283b6fc986239977c2a367acd6e.bindPopup(popup_a925346ef6c867d24544c06d4d9ba98e)
+        ;
+
+        
+    
+    
+            var circle_marker_0b17df8e33403c391400e19d4164b397 = L.circleMarker(
+                [19.054999, 72.8692035],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_754b1f902f7c5bada4cab412932a29e1);
+        
+    
+        var popup_3306bff324edf08f56c6063f818242c0 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_b54a30d33c875f57326cdb7a6a2d68a8 = $(`<div id="html_b54a30d33c875f57326cdb7a6a2d68a8" style="width: 100.0%; height: 100.0%;">Mumbai: 36.403 per 100,000 people</div>`)[0];
+                popup_3306bff324edf08f56c6063f818242c0.setContent(html_b54a30d33c875f57326cdb7a6a2d68a8);
+            
+        
+
+        circle_marker_0b17df8e33403c391400e19d4164b397.bindPopup(popup_3306bff324edf08f56c6063f818242c0)
+        ;
+
+        
+    
+    
+            var circle_marker_1adda9a8524d42aa533c099aae22a0f5 = L.circleMarker(
+                [21.1498134, 79.0820556],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_754b1f902f7c5bada4cab412932a29e1);
+        
+    
+        var popup_78e8d9c74f79d91cd4ed2fde1cb1190c = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_c10699fcbcaf0f3341bab3589d157a49 = $(`<div id="html_c10699fcbcaf0f3341bab3589d157a49" style="width: 100.0%; height: 100.0%;">Nagpur: 25.225 per 100,000 people</div>`)[0];
+                popup_78e8d9c74f79d91cd4ed2fde1cb1190c.setContent(html_c10699fcbcaf0f3341bab3589d157a49);
+            
+        
+
+        circle_marker_1adda9a8524d42aa533c099aae22a0f5.bindPopup(popup_78e8d9c74f79d91cd4ed2fde1cb1190c)
+        ;
+
+        
+    
+    
+            var circle_marker_f51e03c1b5635bab297bbddc6c7ae040 = L.circleMarker(
+                [20.0112475, 73.7902364],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_754b1f902f7c5bada4cab412932a29e1);
+        
+    
+        var popup_412dd2a3f43e61cea17685fff35c08f2 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_77513d9969580506d20725f870560570 = $(`<div id="html_77513d9969580506d20725f870560570" style="width: 100.0%; height: 100.0%;">Nashik: 14.226 per 100,000 people</div>`)[0];
+                popup_412dd2a3f43e61cea17685fff35c08f2.setContent(html_77513d9969580506d20725f870560570);
+            
+        
+
+        circle_marker_f51e03c1b5635bab297bbddc6c7ae040.bindPopup(popup_412dd2a3f43e61cea17685fff35c08f2)
+        ;
+
+        
+    
+    
+            var circle_marker_7a8e8b567463e5eadf800c0b1fb22dbe = L.circleMarker(
+                [25.6093239, 85.1235252],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_754b1f902f7c5bada4cab412932a29e1);
+        
+    
+        var popup_afe1406396695606c72267ce0bf716c1 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_694357345b4170707cda4458396d8ab3 = $(`<div id="html_694357345b4170707cda4458396d8ab3" style="width: 100.0%; height: 100.0%;">Patna: 4.067 per 100,000 people</div>`)[0];
+                popup_afe1406396695606c72267ce0bf716c1.setContent(html_694357345b4170707cda4458396d8ab3);
+            
+        
+
+        circle_marker_7a8e8b567463e5eadf800c0b1fb22dbe.bindPopup(popup_afe1406396695606c72267ce0bf716c1)
+        ;
+
+        
+    
+    
+            var circle_marker_5ac90197221c1fb365eaf69c7a83a1e0 = L.circleMarker(
+                [18.5213738, 73.8545071],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_754b1f902f7c5bada4cab412932a29e1);
+        
+    
+        var popup_3692c65aac5ff9441af0c6f8507a8fd8 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_1e1a570218c55fc404742226b997e936 = $(`<div id="html_1e1a570218c55fc404742226b997e936" style="width: 100.0%; height: 100.0%;">Pune: 64.267 per 100,000 people</div>`)[0];
+                popup_3692c65aac5ff9441af0c6f8507a8fd8.setContent(html_1e1a570218c55fc404742226b997e936);
+            
+        
+
+        circle_marker_5ac90197221c1fb365eaf69c7a83a1e0.bindPopup(popup_3692c65aac5ff9441af0c6f8507a8fd8)
+        ;
+
+        
+    
+    
+            var circle_marker_9abda1e28a24505930baf66162d4a289 = L.circleMarker(
+                [22.3053263, 70.8028377],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_754b1f902f7c5bada4cab412932a29e1);
+        
+    
+        var popup_fc7f7f55a0eff4dc5708fc77d9649deb = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_7a90f9b66013e6586b00ddc785036113 = $(`<div id="html_7a90f9b66013e6586b00ddc785036113" style="width: 100.0%; height: 100.0%;">Rajkot: 3.461 per 100,000 people</div>`)[0];
+                popup_fc7f7f55a0eff4dc5708fc77d9649deb.setContent(html_7a90f9b66013e6586b00ddc785036113);
+            
+        
+
+        circle_marker_9abda1e28a24505930baf66162d4a289.bindPopup(popup_fc7f7f55a0eff4dc5708fc77d9649deb)
+        ;
+
+        
+    
+    
+            var circle_marker_4530e5b90f26f50aef53193333f044c1 = L.circleMarker(
+                [34.0747444, 74.8204443],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_754b1f902f7c5bada4cab412932a29e1);
+        
+    
+        var popup_66401db777b84a346c122c695d554c3a = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_3a020d0a35579f66ef571df2b40b61cc = $(`<div id="html_3a020d0a35579f66ef571df2b40b61cc" style="width: 100.0%; height: 100.0%;">Srinagar: 10.988 per 100,000 people</div>`)[0];
+                popup_66401db777b84a346c122c695d554c3a.setContent(html_3a020d0a35579f66ef571df2b40b61cc);
+            
+        
+
+        circle_marker_4530e5b90f26f50aef53193333f044c1.bindPopup(popup_66401db777b84a346c122c695d554c3a)
+        ;
+
+        
+    
+    
+            var circle_marker_a1f9a11056ba540605c64e87bfc21e73 = L.circleMarker(
+                [21.2094892, 72.8317058],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_754b1f902f7c5bada4cab412932a29e1);
+        
+    
+        var popup_bedfa0b691a95dd2fc101210b08058ec = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_c3cfe5bf0185d66d63eb90c2f28ddbdd = $(`<div id="html_c3cfe5bf0185d66d63eb90c2f28ddbdd" style="width: 100.0%; height: 100.0%;">Surat: 11.709 per 100,000 people</div>`)[0];
+                popup_bedfa0b691a95dd2fc101210b08058ec.setContent(html_c3cfe5bf0185d66d63eb90c2f28ddbdd);
+            
+        
+
+        circle_marker_a1f9a11056ba540605c64e87bfc21e73.bindPopup(popup_bedfa0b691a95dd2fc101210b08058ec)
+        ;
+
+        
+    
+    
+            var circle_marker_d17f14c9beea8b35cadea405a14d9831 = L.circleMarker(
+                [19.1943294, 72.9701779],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_754b1f902f7c5bada4cab412932a29e1);
+        
+    
+        var popup_8ae1da4c0306da58c61d81532e2e702b = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_eb3b5d8a3eae27539783699b745a210c = $(`<div id="html_eb3b5d8a3eae27539783699b745a210c" style="width: 100.0%; height: 100.0%;">Thane: 3.741 per 100,000 people</div>`)[0];
+                popup_8ae1da4c0306da58c61d81532e2e702b.setContent(html_eb3b5d8a3eae27539783699b745a210c);
+            
+        
+
+        circle_marker_d17f14c9beea8b35cadea405a14d9831.bindPopup(popup_8ae1da4c0306da58c61d81532e2e702b)
+        ;
+
+        
+    
+    
+            var circle_marker_7131eeba583dec79f8003db6a8c35867 = L.circleMarker(
+                [25.3356491, 83.0076292],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_754b1f902f7c5bada4cab412932a29e1);
+        
+    
+        var popup_d70fb64647161ddb26a08f5c8f2b8946 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_4f921067a7e4daaf810f0ba23bf83f65 = $(`<div id="html_4f921067a7e4daaf810f0ba23bf83f65" style="width: 100.0%; height: 100.0%;">Varanasi: 2.518 per 100,000 people</div>`)[0];
+                popup_d70fb64647161ddb26a08f5c8f2b8946.setContent(html_4f921067a7e4daaf810f0ba23bf83f65);
+            
+        
+
+        circle_marker_7131eeba583dec79f8003db6a8c35867.bindPopup(popup_d70fb64647161ddb26a08f5c8f2b8946)
+        ;
+
+        
+    
+    
+            var circle_marker_f15dc1331712f5c64ee43baf346a7177 = L.circleMarker(
+                [19.3428238, 72.805441],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_754b1f902f7c5bada4cab412932a29e1);
+        
+    
+        var popup_ebd7e86947516e0fe994cc72f0877a70 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_60d5ba5a3e1458a807e25f4ecae42fb6 = $(`<div id="html_60d5ba5a3e1458a807e25f4ecae42fb6" style="width: 100.0%; height: 100.0%;">Vasai: 4.939 per 100,000 people</div>`)[0];
+                popup_ebd7e86947516e0fe994cc72f0877a70.setContent(html_60d5ba5a3e1458a807e25f4ecae42fb6);
+            
+        
+
+        circle_marker_f15dc1331712f5c64ee43baf346a7177.bindPopup(popup_ebd7e86947516e0fe994cc72f0877a70)
+        ;
+
+        
+    
+    
+            var circle_marker_ebbf1c4bdbec019d8e564f395bb91096 = L.circleMarker(
+                [17.6935526, 83.2921297],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_754b1f902f7c5bada4cab412932a29e1);
+        
+    
+        var popup_75157e33a8aecf44895493ed5afe1ed8 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_8fe901d7e05bc49cac2a145d977e1f48 = $(`<div id="html_8fe901d7e05bc49cac2a145d977e1f48" style="width: 100.0%; height: 100.0%;">Visakhapatnam: 4.746 per 100,000 people</div>`)[0];
+                popup_75157e33a8aecf44895493ed5afe1ed8.setContent(html_8fe901d7e05bc49cac2a145d977e1f48);
+            
+        
+
+        circle_marker_ebbf1c4bdbec019d8e564f395bb91096.bindPopup(popup_75157e33a8aecf44895493ed5afe1ed8)
+        ;
+
+        
+    
+</script>
+</html>

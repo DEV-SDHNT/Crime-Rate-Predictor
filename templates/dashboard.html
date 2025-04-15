@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crime Rate Predictor</title>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <link rel="stylesheet" href="{{ url_for('static',filename='style.css') }}">
+    <!-- <link rel="stylesheet" href="../static/style.css"> -->
+</head>
+
+<body>
+    <div class="container">
+        <div class="left-container">
+            <div class="predictor-container">
+                <h1>Crime Rate Predictor</h1>
+                <form action="/" method="post">
+                    <div class="item">
+                        <!-- <label for="city">City : </label><br> -->
+                        <select name="city" id="city" required>
+                            {% for City in cities %}
+                            <option value="{{ City }}">{{ City }}</option>
+                            {% endfor %}
+                        </select>
+                    </div>
+                    <div class="item">
+                        <!-- <label for="crime_code">Crime code : </label><br> -->
+                        <input type="number" name="crime_code" id="crime_code" placeholder="Crime Code" required>
+                    </div>
+                    <div class="item">
+                        <!-- <label for="hour">Hour : </label><br> -->
+                        <input type="number" name="year" id="year" placeholder="Year" required>
+                    </div>
+                    <div class="item">
+                        <button type="submit">Predict</button>
+                    </div><br>
+                </form>
+            </div>
+            <div class="result">
+                <div class="prediction">
+                    {% if prediction is not none %}
+                    <h2>{{ prediction }}</h2>
+                    <p>per 100,000 people.</p>
+                    {% else %}
+                    <h2>Prediction</h2>
+                    {% endif %}
+                </div>
+                <div class="rmse">
+                    <h3>RMSE:</h3>
+                    <h2>
+                        1.722e-4
+                    </h2>
+                </div>
+                <div class="mse">
+                    <h3>MAE:</h3>
+                    <h2> 9.392e-5</h2>
+                </div>
+                <div class="info">
+                    <h4>Devloped By:</h4>
+                    <h3>DEV-SDHNT</h3>
+                </div>
+            </div>
+        </div>
+
+        <div class="right-container">
+            <div class="map">
+                <!-- <center>
+                    <h1>Map</h1>
+                </center> -->
+                <!-- {% include 'crime_map.html' %} -->
+                <iframe src="{{ url_for('static', filename='crime_map.html') }}"
+                    frameborder="0"></iframe>
+            </div>
+        </div>            
+    </div>
+    <div class="plots">
+        <div class="plot1">
+            {{ graph1 | safe }}
+        </div>
+        <div class="plot2">
+            {{ graph2 | safe }}
+        </div>
+        <!-- <div class="plot3">
+            <h1>Plot 3</h1>
+        </div>
+        <div class="plot4">
+            <h1>Plot 4</h1>
+        </div> -->
+    </div>
+</body>
+
+</html>
