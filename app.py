@@ -58,15 +58,17 @@ def generate_map():
 
 @cache.memoize(timeout=6000)
 def crimeRateDistribution(df):
-    print("Crime Rate Distribution Graph created")
+    time.sleep(10)
     fig=px.histogram(df,x='Crime Rate',title="Crime Rate Distribution")
     fig.write_html("templates/crimeRateDistribution.html")
+    print("Crime Rate Distribution Graph created")
     shutil.copy('templates/crimeRateDistribution.html','static/crimeRateDistribution.html')
     print("Crime Rate Distribution Graph Done !!")
     return "templates/crimeRateDistribution.html"
 
 @cache.memoize(timeout=6000)
 def TopCrimeHotSpot(df):
+    time.sleep(15)
     if 'City' not in df.columns or 'Crime Rate' not in df.columns:
         return "Dataset don't have City and Crime rate columns"
     cityCrimeRate=df.groupby('City_Name')['Crime Rate'].mean().reset_index()
