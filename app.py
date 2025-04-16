@@ -60,7 +60,10 @@ def generate_map():
 def crimeRateDistribution(df):
     print("Crime Rate Distribution Graph created")
     fig=px.histogram(df,x='Crime Rate',title="Crime Rate Distribution")
-    return fig.to_html(full_html=False)
+    fig.write_html("templates/crimeRateDistribution.html")
+    shutil.copy('templates/crimeRateDistribution.html','static/crimeRateDistribution.html')
+    print("Crime Rate Distribution Graph Done !!")
+    return "templates/crimeRateDistribution.html"
 
 @cache.memoize(timeout=6000)
 def TopCrimeHotSpot(df):
@@ -77,7 +80,9 @@ def TopCrimeHotSpot(df):
         color_continuous_scale='Reds'
     )
     print("Top 10 Done")
-    return fig.to_html(full_html=False)
+    fig.write_html("templates/TopCrimeHotspot.html")
+    shutil.copy('templates/TopCrimeHotspot.html','static/TopCrimeHotspot.html')
+    return "templates/TopCrimeHotspot.html"
 
 @app.route('/',methods=['GET','POST'])
 def home():
@@ -94,14 +99,14 @@ def home():
         pred=model.predict(input_data)[0]
         print(pred)
     cities=sorted(df['City_Name'].unique())
-    time.sleep(5)
+    # time.sleep(5)
     generate_map()
-    time.sleep(5)
+    # time.sleep(5)
     graph1=crimeRateDistribution(df)
-    time.sleep(5)
+    # time.sleep(5)
     graph2=TopCrimeHotSpot(df)
     return render_template('dashboard.html',cities=cities,prediction=pred,graph1=graph1,graph2=graph2)
 
 if __name__ == '__main__':
-    port=int(os.environ.get("PORT",5000))
-    app.run(debug=False,host="0.0.0.0",port=port)
+    # port=int(os.environ.get("PORT",5000))
+    app.run(debug=True,host="0.0.0.0")

@@ -76,10 +76,14 @@
     </div>
     <div class="plots">
         <div class="plot1">
-            {{ graph1 | safe }}
+            <!-- {{ graph1 | safe }} -->
+            <iframe src="{{ url_for('static', filename='crimeRateDistribution.html') }}"
+            frameborder="0"></iframe>
         </div>
         <div class="plot2">
-            {{ graph2 | safe }}
+            <!-- {{ graph2 | safe }} -->
+            <iframe src="{{ url_for('static', filename='TopCrimeHotspot.html') }}"
+            frameborder="0"></iframe>
         </div>
         <!-- <div class="plot3">
             <h1>Plot 3</h1>
