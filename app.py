@@ -23,43 +23,43 @@ features = ['City', 'Crime Code', 'year']
 # Interactive Map with Crime Rate Visualization
 @cache.memoize(timeout=6000)
 def generate_map():
-    # if not os.path.exists('./templates/crime_map.html'):
-    print("Generating map....")
-    geolocator = Nominatim(user_agent="crime_mapper")
-    city_crime = df.groupby('City_Name').agg({'Crime Rate': 'mean'}).reset_index()
-    # Fetch coordinates for dataset cities
-    city_crime['Coordinates'] = city_crime['City_Name'].apply(lambda city: geolocator.geocode(city, timeout=10))
-    city_crime = city_crime.dropna()
-    city_crime['Latitude'] = city_crime['Coordinates'].apply(lambda loc: loc.latitude)
-    city_crime['Longitude'] = city_crime['Coordinates'].apply(lambda loc: loc.longitude)
-    city_crime.drop(columns=['Coordinates'], inplace=True)
-    # Define color scale
-    max_crime = city_crime['Crime Rate'].max()
-    city_crime['Color'] = city_crime['Crime Rate'].apply(lambda x: 'red' if x > (max_crime * 0.2) else 'green')
-    # Create Folium Map
-    map_center = [city_crime['Latitude'].mean(), city_crime['Longitude'].mean()]
-    crime_map = folium.Map(location=map_center, zoom_start=5,tiles='openstreetmap',attr='OpenStreet Maps')
-    # Add markers
-    for _, row in city_crime.iterrows():
-        folium.CircleMarker(
-            location=[row['Latitude'], row['Longitude']],
-            radius=5,
-            color=row['Color'],
-            fill=True,
-            fill_color=row['Color'],
-            fill_opacity=0.7,
-            popup=f"{row['City_Name']}: {row['Crime Rate']} per 100,000 people"
-        ).add_to(crime_map)
-    # Save map
-    crime_map.save("templates/crime_map.html")
-    shutil.copy('templates/crime_map.html','static/crime_map.html')
-    print("---|  Interactive crime map saved as templates/crime_map.html  |---")
+    if not os.path.exists('./templates/crime_map.html'):
+        print("Generating map....")
+        geolocator = Nominatim(user_agent="crime_mapper")
+        city_crime = df.groupby('City_Name').agg({'Crime Rate': 'mean'}).reset_index()
+        # Fetch coordinates for dataset cities
+        city_crime['Coordinates'] = city_crime['City_Name'].apply(lambda city: geolocator.geocode(city, timeout=10))
+        city_crime = city_crime.dropna()
+        city_crime['Latitude'] = city_crime['Coordinates'].apply(lambda loc: loc.latitude)
+        city_crime['Longitude'] = city_crime['Coordinates'].apply(lambda loc: loc.longitude)
+        city_crime.drop(columns=['Coordinates'], inplace=True)
+        # Define color scale
+        max_crime = city_crime['Crime Rate'].max()
+        city_crime['Color'] = city_crime['Crime Rate'].apply(lambda x: 'red' if x > (max_crime * 0.2) else 'green')
+        # Create Folium Map
+        map_center = [city_crime['Latitude'].mean(), city_crime['Longitude'].mean()]
+        crime_map = folium.Map(location=map_center, zoom_start=5,tiles='openstreetmap',attr='OpenStreet Maps')
+        # Add markers
+        for _, row in city_crime.iterrows():
+            folium.CircleMarker(
+                location=[row['Latitude'], row['Longitude']],
+                radius=5,
+                color=row['Color'],
+                fill=True,
+                fill_color=row['Color'],
+                fill_opacity=0.7,
+                popup=f"{row['City_Name']}: {row['Crime Rate']} per 100,000 people"
+            ).add_to(crime_map)
+        # Save map
+        crime_map.save("templates/crime_map.html")
+        shutil.copy('templates/crime_map.html','static/crime_map.html')
+        print("---|  Interactive crime map saved as templates/crime_map.html  |---")
     return 'templates/crime_map.html'
 
 @cache.memoize(timeout=6000)
 def crimeRateDistribution(df):
-    time.sleep(10)
     if not os.path.exists('./templates/crime_map.html'):
+        time.sleep(10)
         fig=px.histogram(df,x='Crime Rate',title="Crime Rate Distribution")
         fig.write_html("templates/crimeRateDistribution.html")
         print("Crime Rate Distribution Graph created")
