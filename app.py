@@ -8,11 +8,7 @@ import joblib
 import shutil
 import os
 import time
-import hashlib
-import plotly
 import plotly.express as px
-
-
 
 app = Flask(__name__)
 
@@ -22,10 +18,6 @@ cache=Cache(app,config={'CACHE_TYPE':'simple'})
 model=joblib.load('./Model/xgbModel.pkl')
 df=pd.read_csv('./Datasets/processedDataset.csv')
 features = ['City', 'Crime Code', 'year']
-
-
-def get_df_hasd(df):
-    return hashlib.md5(pd.util.hash_pandas_object(df,index=True).values).hexdigest()
 
 
 # Interactive Map with Crime Rate Visualization
@@ -70,22 +62,6 @@ def crimeRateDistribution(df):
     fig=px.histogram(df,x='Crime Rate',title="Crime Rate Distribution")
     return fig.to_html(full_html=False)
 
-# def featureImportance(model,features):
-#     importance=model.feature_importances_
-#     importance_df=pd.DataFrame({
-#         'Feature':features,
-#         'Importance':importance
-#     }).sort_values(by='Importance',ascending=False)
-#     fig=px.bar(importance_df,
-#         x='Feature',
-#         y='Importance',
-#         title='Feature Importance for Crime Rate',
-#         labels={'Importance':'Relative importance'},
-#         color='Importance',
-#         color_continuous_scale='blues')
-#     print("Bar graph created!")
-#     return fig.to_html(full_html=False)
-
 @cache.memoize(timeout=6000)
 def TopCrimeHotSpot(df):
     if 'City' not in df.columns or 'Crime Rate' not in df.columns:
@@ -118,18 +94,13 @@ def home():
         pred=model.predict(input_data)[0]
         print(pred)
     cities=sorted(df['City_Name'].unique())
-    time.sleep(5)
-    generate_map()
-    time.sleep(5)
-    graph1=crimeRateDistribution(df)
-    time.sleep(5)
-    graph2=TopCrimeHotSpot(df)
-    return render_template('dashboard.html',cities=cities,prediction=pred,graph1=graph1,graph2=graph2)
-
-# @app.route('/analysis')
-# def analysis():
-#     importance=featureImportance(model,features=features)
-#     return render_template('analysis.html',graph1=importance)
+    # time.sleep(5)
+    # generate_map()
+    # time.sleep(5)
+    # graph1=crimeRateDistribution(df)
+    # time.sleep(5)
+    # graph2=TopCrimeHotSpot(df)
+    return render_template('dashboard.html',cities=cities,prediction=pred)#,graph1=graph1,graph2=graph2)
 
 if __name__ == '__main__':
     port=int(os.environ.get("PORT",5000))
