@@ -7,6 +7,7 @@ from sklearn.preprocessing import LabelEncoder
 import joblib
 import shutil
 import os
+import time
 import hashlib
 import plotly
 import plotly.express as px
@@ -117,8 +118,11 @@ def home():
         pred=model.predict(input_data)[0]
         print(pred)
     cities=sorted(df['City_Name'].unique())
+    time.sleep(5)
     generate_map()
+    time.sleep(5)
     graph1=crimeRateDistribution(df)
+    time.sleep(5)
     graph2=TopCrimeHotSpot(df)
     return render_template('dashboard.html',cities=cities,prediction=pred,graph1=graph1,graph2=graph2)
 
