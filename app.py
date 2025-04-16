@@ -94,13 +94,13 @@ def home():
         pred=model.predict(input_data)[0]
         print(pred)
     cities=sorted(df['City_Name'].unique())
-    # time.sleep(5)
-    # generate_map()
-    # time.sleep(5)
-    # graph1=crimeRateDistribution(df)
-    # time.sleep(5)
-    # graph2=TopCrimeHotSpot(df)
-    return render_template('dashboard.html',cities=cities,prediction=pred)#,graph1=graph1,graph2=graph2)
+    time.sleep(5)
+    generate_map()
+    time.sleep(5)
+    graph1=crimeRateDistribution(df)
+    time.sleep(5)
+    graph2=TopCrimeHotSpot(df)
+    return render_template('dashboard.html',cities=cities,prediction=pred,graph1=graph1,graph2=graph2)
 
 if __name__ == '__main__':
     port=int(os.environ.get("PORT",5000))
