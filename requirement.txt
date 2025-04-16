@@ -1,4 +1,5 @@
 flask
+flask-caching
 gunicorn
 numpy
 pandas
