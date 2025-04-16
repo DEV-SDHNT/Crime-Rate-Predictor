@@ -15,6 +15,7 @@ import plotly.express as px
 
 app = Flask(__name__)
 
+
 cache=Cache(app,config={'CACHE_TYPE':'simple'})
 
 model=joblib.load('./Model/xgbModel.pkl')
@@ -127,4 +128,5 @@ def home():
 #     return render_template('analysis.html',graph1=importance)
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    port=int(os.environ.get("PORT",5000))
+    app.run(debug=False,host="0.0.0.0",port=port)
