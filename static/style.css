@@ -38,7 +38,7 @@ body {
     min-height: 50vh;
     grid-column: 1/1;
     grid-row: 1/2;
-    box-shadow: #afa 0 0 15px;
+    box-shadow: #232e3f 0 0 10px;
     margin-bottom: 0px;
 
 }
@@ -132,7 +132,7 @@ body {
     grid-row: 1/2;
     grid-column: 2/2;
     border: none;
-    width: 100%;
+    /* width: 100%; */
     height: max-content;
     border-radius: 20px;
     padding: 20px;
@@ -148,7 +148,7 @@ body {
 .left-container .result .mse {
     background-color: #232e3f;
     border: none;
-    width: 100%;
+    /* width: 100%; */
     padding: 20px;
     padding-bottom: 0px;
     grid-row: 2/2;
@@ -250,18 +250,24 @@ body {
 @media (max-width:768px) {
     .container {
         flex-direction: column;
+        /* height: max-content; */
     }
     .left-container{
         width: 100vw;
     }
     .left-container .predictor-container{
-        width: 100vw;
+        width: 98vw;
+        height: max-content;
     }
     .result .prediction,.rsme,.mse,.info{
-        width: 50vw;
+        width: 48vw;
     }
     .right-container{
-        width: 100vw;
+        width: 98vw;
+        /* height: 50vh; */
+    }
+    .right-container iframe{
+        height: 50vh;
     }
     .plots{
         flex-direction: column;
