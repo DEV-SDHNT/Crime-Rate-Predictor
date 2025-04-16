@@ -69,21 +69,18 @@
                     <h1>Map</h1>
                 </center> -->
                 <!-- {% include 'crime_map.html' %} -->
-                <iframe src="{{ url_for('static', filename='crime_map.html') }}"
-                    frameborder="0"></iframe>
+                <iframe frameborder="0" id="mapframe" ></iframe>
             </div>
         </div>            
     </div>
     <div class="plots">
         <div class="plot1">
             <!-- {{ graph1 | safe }} -->
-            <iframe src="{{ url_for('static', filename='crimeRateDistribution.html') }}"
-            frameborder="0"></iframe>
+            <iframe frameborder="0" id="plot1"></iframe>
         </div>
         <div class="plot2">
             <!-- {{ graph2 | safe }} -->
-            <iframe src="{{ url_for('static', filename='TopCrimeHotspot.html') }}"
-            frameborder="0"></iframe>
+            <iframe frameborder="0" id="plot2"></iframe>
         </div>
         <!-- <div class="plot3">
             <h1>Plot 3</h1>
@@ -92,6 +89,22 @@
             <h1>Plot 4</h1>
         </div> -->
     </div>
+
+    <script>
+        setTimeout(()=>{
+            const mapFrame=document.getElementById('mapframe');
+            mapFrame.src="{{ url_for('static', filename='crime_map.html') }}";
+        },3000);
+        setTimeout(()=>{
+            const plot1=document.getElementById('plot1');
+            plot1.src="{{ url_for('static', filename='crimeRateDistribution.html') }}";
+        },8000);
+        setTimeout(()=>{
+            const plot2=document.getElementById('plot2');
+            plot2.src="{{ url_for('static', filename='TopCrimeHotspot.html') }}";
+        },15000)
+    </script>
+
 </body>
 
 </html>
