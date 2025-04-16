@@ -34,8 +34,8 @@ body {
     padding: 20px;
     height: fit-content;
     width: fit-content;
-    min-width: fit-content;
-    min-height: 50vh;
+    /* min-width: fit-content; */
+    /* min-height: 50vh; */
     grid-column: 1/1;
     grid-row: 1/2;
     box-shadow: #232e3f 0 0 10px;
@@ -261,7 +261,6 @@ body {
     }
     .left-container .prediction form button{
         padding: 10px;
-        
     }
     .result .prediction,.rsme,.mse,.info{
         width: 48vw;
