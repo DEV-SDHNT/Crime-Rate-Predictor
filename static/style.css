@@ -257,7 +257,11 @@ body {
     }
     .left-container .predictor-container{
         width: 98vw;
-        height: max-content;
+        height: fit-content;
+    }
+    .left-container .prediction form button{
+        padding: 10px;
+        
     }
     .result .prediction,.rsme,.mse,.info{
         width: 48vw;
