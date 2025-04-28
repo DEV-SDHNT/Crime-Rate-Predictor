@@ -145,6 +145,7 @@ def home():
     crimes=sorted(df['Crime_Description'].unique())
     crimeCode=sorted(df['Crime Code'].unique())
     generate_map()
+    time.sleep(10)
     graph1=crimeRateDistribution(df)
     graph2=TopCrimeHotSpot(df)
     graph3=CrimeAndCrimeRate(df)

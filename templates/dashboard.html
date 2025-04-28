@@ -102,23 +102,23 @@
         setTimeout(()=>{
             const mapFrame=document.getElementById('mapframe');
             mapFrame.src="{{ url_for('static', filename='crime_map.html') }}";
-        },1000);
+        },2000);
         setTimeout(()=>{
             const plot1=document.getElementById('plot1');
             plot1.src="{{ url_for('static', filename='crimeRateDistribution.html') }}";
-        },1000);
+        },4000);
         setTimeout(()=>{
             const plot2=document.getElementById('plot2');
             plot2.src="{{ url_for('static', filename='TopCrimeHotspot.html') }}";
-        },1000);
+        },6000);
 								setTimeout(()=>{
             const plot3=document.getElementById('plot3');
             plot3.src="{{ url_for('static', filename='CrimeAndCrimeRate.html') }}";
-        },1000);
+        },8000);
 								setTimeout(()=>{
             const plot4=document.getElementById('plot4');
             plot4.src="{{ url_for('static', filename='YearlyRate.html') }}";
-        },3000);
+        },8000);
     </script>
 
 </body>
