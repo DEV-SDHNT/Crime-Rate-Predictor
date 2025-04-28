@@ -147,8 +147,11 @@ def home():
     generate_map()
     time.sleep(10)
     graph1=crimeRateDistribution(df)
+    time.sleep(5)
     graph2=TopCrimeHotSpot(df)
+    time.sleep(5)
     graph3=CrimeAndCrimeRate(df)
+    time.sleep(5)
     graph4=YearlyRate(df)
 
     return render_template(
