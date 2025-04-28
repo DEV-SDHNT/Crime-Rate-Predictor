@@ -54,7 +54,7 @@ def generate_map():
     print("Map Generated.")
     return 'templates/crime_map.html'
 
-@cache.memoize(timeout=60)
+@cache.memoize(timeout=6000)
 def crimeRateDistribution(df):
     fig=px.histogram(df,x='Crime Rate',title="Crime Rate Distribution",template='plotly_dark')
     fig.write_html("templates/crimeRateDistribution.html")
@@ -63,7 +63,7 @@ def crimeRateDistribution(df):
     print("Crime Rate Distribution Graph Done !!")
     return "templates/crimeRateDistribution.html"
 
-@cache.memoize(timeout=60)
+@cache.memoize(timeout=6000)
 def TopCrimeHotSpot(df):
     if 'City' not in df.columns or 'Crime Rate' not in df.columns:
         return "Dataset don't have City and Crime rate columns"
@@ -83,7 +83,7 @@ def TopCrimeHotSpot(df):
     shutil.copy('templates/TopCrimeHotspot.html','static/TopCrimeHotspot.html')
     return "templates/TopCrimeHotspot.html"
 
-cache.memoize(timeout=60)
+cache.memoize(timeout=6000)
 def CrimeAndCrimeRate(df):
     if 'Crime_Description' not in df.columns or 'Crime Rate' not in df.columns:
         return "Crime description or crime rate missing"
@@ -102,7 +102,7 @@ def CrimeAndCrimeRate(df):
     shutil.copy("templates/CrimeAndCrimeRate.html","static/CrimeAndCrimeRate.html")
     return "templates/CrimeAndCrimeRate.html"
 
-cache.memoize(timeout=60)
+cache.memoize(timeout=600)
 def YearlyRate(df):
     if 'year' not in df.columns or 'Crime Rate' not in df.columns:
         return "Year or Crime Rate missing "
@@ -120,7 +120,7 @@ def YearlyRate(df):
     shutil.copy("templates/YearlyRate.html","static/YearlyRate.html")
     return "templates/YearlyRate.html"
 
-@cache.memoize(timeout=600)
+@cache.memoize(timeout=6000)
 @app.route('/',methods=['GET','POST'])
 def home():
     pred=None
