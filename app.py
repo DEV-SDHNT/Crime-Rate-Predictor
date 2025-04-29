@@ -1,4 +1,4 @@
-from flask import Flask, render_template,request
+from flask import Flask, render_template,request,jsonify
 from flask_caching import Cache
 import pandas as pd
 import folium
@@ -148,11 +148,8 @@ def home():
     generate_map()
 
     graph1=crimeRateDistribution(df)
-
     graph2=TopCrimeHotSpot(df)
-
     graph3=CrimeAndCrimeRate(df)
-
     graph4=YearlyRate(df)
 
     return render_template(

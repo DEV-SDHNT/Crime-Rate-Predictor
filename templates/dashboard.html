@@ -14,7 +14,7 @@
         <div class="left-container">
             <div class="predictor-container">
                 <h1>Crime Rate Predictor</h1>
-                <form action="/" method="post">
+                <form action="/" method="post" id="prediction-form">
                     <div class="item">
                         <!-- <label for="city">City : </label><br> -->
                         <select name="city" id="city" required>
@@ -50,19 +50,19 @@
             <div class="result">
                 <div class="prediction">
                     {% if prediction is not none %}
-                    <h2>{{ prediction }}</h2>
+                    <h1>{{ prediction }}</h1>
                     <p>per 100,000 people.</p>
                     {% else %}
-                    <h2>Prediction</h2>
+                    <h1>Prediction</h1>
                     {% endif %}
                 </div>
                 <div class="rmse">
                     <h3>RMSE:</h3>
-                    <h2>1.50e-4</h2>
+                    <h1>1.50e-4</h1>
                 </div>
                 <div class="mse">
                     <h3>MAE:</h3>
-                    <h2> 1.06e-4</h2>
+                    <h1> 1.06e-4</h1>
                 </div>
                 <div class="info">
                     <h4>Devloped By:</h4>
@@ -99,6 +99,8 @@
     </div>
 
     <script>
+
+						
         setTimeout(()=>{
             const mapFrame=document.getElementById('mapframe');
             mapFrame.src="{{ url_for('static', filename='crime_map.html') }}";
