@@ -22,7 +22,8 @@ features = ['City', 'Crime Code', 'year','Crime Description']
 # Interactive Map with Crime Rate Visualization
 @cache.memoize(timeout=6000)
 def generate_map():
-    print("Generating map....")
+    if os.path.exists("./templates/crime_map.html"):
+        return "templates/crime_map.html"
     geolocator = Nominatim(user_agent="crime_mapper")
     city_crime = df.groupby('City_Name').agg({'Crime Rate': 'mean'}).reset_index()
     # Fetch coordinates for dataset cities
@@ -145,13 +146,13 @@ def home():
     crimes=sorted(df['Crime_Description'].unique())
     crimeCode=sorted(df['Crime Code'].unique())
     generate_map()
-    time.sleep(10)
+
     graph1=crimeRateDistribution(df)
-    time.sleep(5)
+
     graph2=TopCrimeHotSpot(df)
-    time.sleep(5)
+
     graph3=CrimeAndCrimeRate(df)
-    time.sleep(5)
+
     graph4=YearlyRate(df)
 
     return render_template(
