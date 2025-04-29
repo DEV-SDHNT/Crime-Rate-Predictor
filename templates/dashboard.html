@@ -26,6 +26,7 @@
                     <div class="item">
                         <!-- <label for="crime_code">Crime code : </label><br> -->
                         <select name="crime_code" id="crime_code" required>
+																										<option value="">Crime Code</option>
 																										{% for code in crimeCode %}
 																										<option value="{{ code }}">{{ code }}</option>
 																										{% endfor %}
